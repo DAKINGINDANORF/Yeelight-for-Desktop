@@ -6,6 +6,7 @@ import random
 
 class Ultrasonic:
 
+    # Digital pins on microcontroller
     trig = Pin(15, Pin.OUT)
     echo = Pin(13, Pin.IN)
 
@@ -13,6 +14,7 @@ class Ultrasonic:
 
         print("Class initialised")
 
+    # Measures distance, returns it in CM
     def measure(self):
         self.trig.off()
         time.sleep_us(2)
