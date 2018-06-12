@@ -115,3 +115,19 @@ class YeelightController:
         brightness = self.ultrasonic.measure() / 255
         for bulbs in self.bulbs_list:
             bulbs['bulb_object'].set_brightness(brightness)
+
+    # Toggles light witht button connect to ESP32
+    def toggleLightsWithButton(self):
+        button = Pin(15, Pin.IN)
+        if button.value == 1:
+            self.toggleallbulbs()
+            time.sleep_us(300)
+
+    # ESP demo
+    def runESPdemo(self):
+        while True:
+            self.toggleLightsWithButton()
+            self.changeBrightnessDistance()
+
+YeelightController = YeelightController()
+YeelightController.runESPdemo()
