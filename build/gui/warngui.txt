@@ -1,0 +1,36 @@
+missing module named 'multiprocessing.forking' - imported by c:\users\tommie\appdata\local\programs\python\python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named resource - imported by posix, test.support, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named posix - imported by os, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named 'org.python' - imported by pickle, C:\Users\Tommie\Documents\Project Yeelight\gui.py, xml.sax
+missing module named readline - imported by cmd, code, pdb, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named _winreg - imported by platform, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named _scproxy - imported by future.backports.urllib.request, urllib.request
+missing module named java - imported by platform, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named 'java.lang' - imported by platform, C:\Users\Tommie\Documents\Project Yeelight\gui.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named termios - imported by tty, getpass, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named grp - imported by shutil, tarfile, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, netrc, getpass, distutils.util, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named org - imported by copy, C:\Users\Tommie\Documents\Project Yeelight\gui.py
+missing module named urlparse - imported by yeelight.main
+missing module named __builtin__ - imported by future.builtins.misc, future.utils
+missing module named _dbm - imported by dbm.ndbm
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu
+missing module named _gdbm - imported by dbm.gnu
+missing module named dumbdbm - imported by anydbm, future.moves.dbm.dumb
+missing module named anydbm - imported by future.moves.dbm
+missing module named dbhash - imported by anydbm
+missing module named whichdb - imported by future.moves.dbm, anydbm
+missing module named future_builtins - imported by future.builtins.misc
+missing module named dummy_thread - imported by future.backports.misc
+missing module named thread - imported by future.backports.misc

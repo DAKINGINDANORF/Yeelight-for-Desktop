@@ -3,15 +3,13 @@ from yeelightcontroller import YeelightController
 import random
 
 class GUI:
-
-    yeelightcontroller = YeelightController()
     gui_window = Tk()
-    gui_window.title('Yeelight controls for PC and Mac')
+    gui_window.title('Yeelight controls')
 
     # Initialises the GUI with the selected
     def __init__(self):
         print('GUI initialised')
-
+        self.yeelightcontroller = YeelightController()
         self.bulbinfo_list = self.yeelightcontroller.get_info()
         self.singlebulbcontrol_list = []
         x = 0
@@ -41,7 +39,7 @@ class GUI:
                                     command = self.yeelightcontroller.turnoffallbulbs)
         changergb_button = Button(self.gui_window, text='Parse rgb values',
                                     command = self.parsergb)
-        changetemp_button = Button(self.gui_window, text='Change color temperature',
+        changetemp_button = Button(self.gui_window, text='Change color temperature values',
                                     command= lambda: self.yeelightcontroller.change_all_temp(self.temp_slider.get()))
 
         title_label.grid(row= 0, column =0, sticky=NW)

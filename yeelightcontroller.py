@@ -1,6 +1,9 @@
 from yeelight import discover_bulbs
 from yeelight import Bulb
+from server_connector import Server_Connector
 import random
+import time
+import datetime
 
 
 class YeelightController:
@@ -9,10 +12,13 @@ class YeelightController:
 
     # Makes the list containing filtered dictionaries
     def __init__(self):
+        self.server_connector = Server_Connector('80.56.122.76', 54321)
         filtered_list = self.discover()
         for ip in filtered_list:
             self.bulbs_list.append({'bulb_object': Bulb(ip['ip']), 'name': ip['name'], 'id':ip['id']})
             self.check_duplicatename()
+        for bulb in self.bulbs_list:
+            self.server_connector.printData(bulb['id'])
 
     # Discovers bulbs on the network and filters unnecessary info away
     def discover(self):
@@ -58,12 +64,16 @@ class YeelightController:
         print('Turning on all bulbs')
         for bulb in self.bulbs_list:
             bulb['bulb_object'].turn_on()
+            message = [bulb['id'], 'on', str(datetime.datetime.now())]
+            self.server_connector.send(message)
 
     # Turns off all available bulbs
     def turnoffallbulbs(self):
         print('Turning off all bulbs')
-        for bulbs in self.bulbs_list:
-            bulbs['bulb_object'].turn_off()
+        for bulb in self.bulbs_list:
+            bulb['bulb_object'].turn_off()
+            message = [bulb['id'], 'off', str(datetime.datetime.now())]
+            self.server_connector.send(message)
 
     # Toggle all available bulbs:
     def toggleallbulbs(self):
